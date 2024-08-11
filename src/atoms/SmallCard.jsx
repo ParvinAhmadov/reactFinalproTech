@@ -3,7 +3,7 @@ import React from 'react';
 const SmallCard = ({ image, category, title }) => {
   return (
     <div className="w-[411px]">
-      <div className="relative w-full h-[228px] bg-gray-800 rounded-t-lg overflow-hidden group cursor-pointer">
+      <div className="relative w-full h-[228px] bg-gray-800 rounded-lg overflow-hidden group cursor-pointer">
         <img
           src={image}
           alt={category}

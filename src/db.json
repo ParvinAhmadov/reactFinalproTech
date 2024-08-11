@@ -1,0 +1,41 @@
+{
+    "cards": [
+      {
+        "id": 1,
+        "category": "Gadgets",
+        "title": "Study: Earbuds Use, Youngsters at High Risk of Hearing Loss",
+        "author": "Shane Doe",
+        "date": "Mar 15, 2020",
+        "image": "https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/akhil-yerabati-Q2uV5TkjNz8-unsplash-450x255.jpg",
+        "number": 1
+      },
+      {
+        "id": 2,
+        "category": "Technology",
+        "title": "Telescope is Revealing the Galaxies of the Universe Like Never Before",
+        "author": "Shane Doe",
+        "date": "Mar 15, 2020",
+        "image": "https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/greg-rakozy-oMpAz-DN-9I-unsplash-450x300.jpg",
+        "number": 2
+      },
+      {
+        "id": 2,
+        "category": "Technology",
+        "title": "Telescope is Revealing the Galaxies of the Universe Like Never Before",
+        "author": "Shane Doe",
+        "date": "Mar 15, 2020",
+        "image": "https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/greg-rakozy-oMpAz-DN-9I-unsplash-450x300.jpg",
+        "number": 2
+      },
+      {
+        "id": 2,
+        "category": "Technology",
+        "title": "Telescope is Revealing the Galaxies of the Universe Like Never Before",
+        "author": "Shane Doe",
+        "date": "Mar 15, 2020",
+        "image": "https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/greg-rakozy-oMpAz-DN-9I-unsplash-450x300.jpg",
+        "number": 2
+      }
+    ]
+  }
+  
