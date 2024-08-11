@@ -15,11 +15,15 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
 
   useEffect(() => {
     if (isOpen) {
+      document.body.style.overflow = "hidden";
       document.addEventListener("mousedown", handleClickOutside);
     } else {
+      document.body.style.overflow = "auto";
       document.removeEventListener("mousedown", handleClickOutside);
     }
+
     return () => {
+      document.body.style.overflow = "auto"; 
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [isOpen]);
@@ -27,7 +31,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
   return (
     <>
       <div
-        className={`fixed inset-0 z-50 bg-black transition-opacity duration-300 ${
+        className={`fixed inset-0 z-30 bg-black transition-opacity duration-300 ${
           isOpen ? "opacity-50" : "opacity-0 pointer-events-none"
         }`}
         onClick={toggleSidebar}
