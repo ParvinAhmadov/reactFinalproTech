@@ -4,6 +4,7 @@ import SponsoredBanner from '../molekuls/SponsoredBanner.jsx/SponsoredBanner'
 import CardList from '../molekuls/CardList/CardList'
 import EditorPicks from '../atoms/EditorPicks'
 import TrendingVideos from '../molekuls/TrendingVideos/TrendingVideos'
+import Gadgets from '../molekuls/Gadgets/Gadgets'
 
 const Home = () => {
   return (
@@ -19,7 +20,11 @@ const Home = () => {
       <EditorPicks/>
       <CardList />
       </div>
-      <TrendingVideos/>
+      <TrendingVideos />
+      <div className='container mx-auto max-w-7xl'>
+    <Gadgets/>
+
+      </div>
     </div>
     
   )
