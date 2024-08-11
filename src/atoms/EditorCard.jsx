@@ -1,7 +1,6 @@
 import React from 'react';
 
 const EditorCard = ({ card, onEdit, onDelete, onView }) => {
-  // Dinamik sınıf adları belirleme
   const categoryClass = card.category === 'Gadgets' ? 'bg-purple-600' : 'bg-blue-600';
 
   return (
