@@ -1,6 +1,5 @@
 import React from 'react';
 import GagetsSmallCard from '../../atoms/GadgetsSmallCard';
-import SubscribeForm from '../../atoms/SubscribeForm';
 import GadgetsSection from '../../atoms/GadgetsSection';
 
 const Gadgets = () => {
@@ -29,16 +28,20 @@ const Gadgets = () => {
             title="The Famous Dyson Bladeless Fan is On Sale at Walmart"
             date="Jan 12, 2021"
           />
+              <GagetsSmallCard 
+            imageSrc="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/Depositphotos_430988634_xl-2015-4-300x208.jpg"
+            title="The Famous Dyson Bladeless Fan is On Sale at Walmart"
+            date="Jan 12, 2021"
+          />
+              <GagetsSmallCard 
+            imageSrc="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/light-fun-technology-neon-woman-enjoy-headset-happy-virtual-vr_t20_zWNmJX-1-300x201.jpg"
+            title="The Famous Dyson Bladeless Fan is On Sale at Walmart"
+            date="Jan 12, 2021"
+          />
         </div>
       </div>
 
-      <div className="w-full md:w-[336px]">
-        <div className="sticky-wrapper">
-          <div className="sticky top-4">
-            <SubscribeForm />
-          </div>
-        </div>
-      </div>
+   
     </div>
   );
 };

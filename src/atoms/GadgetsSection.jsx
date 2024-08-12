@@ -8,10 +8,7 @@ const GadgetsSection = () => {
     <div>
       <TrendingHeader
         textColor="text-black"
-        title="New Gadgets
-               
-
-"
+        title="New Gadgets"
       />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <GadgetsLargeCard
