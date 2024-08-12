@@ -4,7 +4,7 @@ import { Outlet } from "react-router";
 import Footer from "../Footer/Footer";
 
 const Layout = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false); // isDarkMode state'ini burada tanımlıyoruz
+  const [isDarkMode, setIsDarkMode] = useState(false); 
 
   return (
     <div>

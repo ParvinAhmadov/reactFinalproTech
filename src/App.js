@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { RouterProvider } from 'react-router-dom';
 import routers from './router';
-import { BeatLoader } from 'react-spinners'; // Import BeatLoader
+import { BeatLoader } from 'react-spinners'; 
 
 const App = () => {
   const [loading, setLoading] = useState(true);

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { ToastContainer, toast } from 'react-toastify'; // Import Toastify
-import 'react-toastify/dist/ReactToastify.css'; // Import Toastify CSS
+import { ToastContainer, toast } from 'react-toastify'; 
+import 'react-toastify/dist/ReactToastify.css'; 
 import EditorCard from '../../atoms/EditorCard';
 import CardModal from '../../atoms/CardModal';
 import SpinnerButton from '../../atoms/SpinnerButton';
@@ -24,7 +24,7 @@ const CardList = () => {
         setIsFetching(false);
       })
       .catch(() => {
-        toast.error('Failed to fetch cards.'); // Show error toast on fetch failure
+        toast.error('Failed to fetch cards.'); 
         setIsFetching(false);
       });
   }, []);
@@ -36,12 +36,12 @@ const CardList = () => {
     })
     .then(() => {
       setCards(cards.filter(card => card.id !== id));
-      toast.success('Card deleted successfully!'); // Show success toast on delete
+      toast.success('Card deleted successfully!'); 
       closeModal();
       setIsDeleting(false);
     })
     .catch(() => {
-      toast.error('Failed to delete card.'); // Show error toast on delete failure
+      toast.error('Failed to delete card.'); 
       setIsDeleting(false);
     });
   };
@@ -70,12 +70,12 @@ const CardList = () => {
       .then(response => response.json())
       .then(() => {
         setCards(cards.map(card => (card.id === id ? { ...card, ...updatedCard } : card)));
-        toast.success('Card updated successfully!'); // Show success toast on update
+        toast.success('Card updated successfully!'); 
         closeModal();
         setIsUpdating(false);
       })
       .catch(() => {
-        toast.error('Failed to update card.'); // Show error toast on update failure
+        toast.error('Failed to update card.'); 
         setIsUpdating(false);
       });
   };
@@ -92,12 +92,12 @@ const CardList = () => {
       .then(response => response.json())
       .then(addedCard => {
         setCards([...cards, addedCard]);
-        toast.success('Card added successfully!'); // Show success toast on add
+        toast.success('Card added successfully!'); 
         closeModal();
         setIsAdding(false);
       })
       .catch(() => {
-        toast.error('Failed to add new card.'); // Show error toast on add failure
+        toast.error('Failed to add new card.'); 
         setIsAdding(false);
       });
   };
@@ -115,10 +115,9 @@ const CardList = () => {
 
   return (
     <>
-      <ToastContainer /> {/* Toastify container */}
+      <ToastContainer /> 
 
-      <div className="flex justify-between items-center mb-4">
-        <h1 className="text-2xl font-bold">Card List</h1>
+      <div className="flex justify-end items-center mb-4">
         <SpinnerButton 
           isLoading={isAdding} 
           onClick={openAddModal}
