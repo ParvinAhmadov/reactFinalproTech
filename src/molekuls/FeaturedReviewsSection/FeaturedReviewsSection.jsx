@@ -1,10 +1,14 @@
 import React from 'react';
 import FeaturedLargeCard from '../../atoms/FeaturedLargeCard';
 import FeaturedSmallCard from '../../atoms/FeaturedSmallCard';
+import EditorPicks from '../../atoms/EditorPicks';
 
 const FeaturedReviewsSection = () => {
-  return (
-    <div className="container mx-auto max-w-7xl py-8">
+    return (
+      
+        <div className="container mx-auto max-w-7xl py-8">
+        <EditorPicks title="Featured Reviews"/>
+            
       <div className="flex">
         <FeaturedLargeCard
           image="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/woman-in-3d-virtual-reality-glasses_t20_WQVvL4.jpg"

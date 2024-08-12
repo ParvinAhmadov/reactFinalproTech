@@ -21,7 +21,6 @@ const FeaturedLargeCard = ({ image, category, title, author, date, desrp, author
           alt={category}
           className="w-full h-full object-cover transition-transform duration-500 ease-in-out transform hover:opacity-70"
         />
-        {/* Rating Badge */}
         <div className="absolute top-4 right-4 bg-white p-1 rounded-full text-sm font-bold text-black border">
           {rating}
         </div>

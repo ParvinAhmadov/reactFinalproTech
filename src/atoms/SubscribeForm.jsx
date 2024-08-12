@@ -4,7 +4,7 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 const SubscribeForm = () => {
   return (
-    <div className="bg-white shadow-sm rounded-lg p-6 space-y-4">
+    <div className=" p-6 space-y-4">
       <div className="flex justify-center">
         <FontAwesomeIcon icon={faEnvelope} className="text-blue-600 text-4xl mb-4" />
       </div>
