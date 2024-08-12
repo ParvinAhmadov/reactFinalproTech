@@ -62,9 +62,7 @@ const CardList = () => {
     setIsUpdating(true);
     fetch(`http://localhost:3001/cards/${id}`, {
       method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
+      
       body: JSON.stringify(updatedCard),
     })
       .then((response) => response.json())
