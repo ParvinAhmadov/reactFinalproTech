@@ -7,11 +7,8 @@ import TrendingHeader from "../../atoms/TrendingHeader ";
 const ArticleSection = () => {
   return (
     <div className="container mx-auto max-w-7xl py-8 flex flex-col md:flex-row gap-8">
-          <div className="flex-1 space-y-8">
-          <TrendingHeader
-        textColor="text-black"
-        title="Latest Articles"
-      />
+      <div className="flex-1 space-y-8">
+        <TrendingHeader textColor="text-black" title="Latest Articles" />
         <ArticleCard
           image="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/thisisengineering-raeng-a7A9O5htrKs-unsplash-450x300.jpg"
           category="GAMING"

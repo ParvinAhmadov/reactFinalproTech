@@ -23,7 +23,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
     }
 
     return () => {
-      document.body.style.overflow = "auto"; 
+      document.body.style.overflow = "auto";
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [isOpen]);

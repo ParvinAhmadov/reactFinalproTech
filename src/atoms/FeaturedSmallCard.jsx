@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const FeaturedSmallCard = ({ image, category, title, rating }) => {
   return (

@@ -1,12 +1,10 @@
-import React from 'react';
+import React from "react";
 
 const SponsoredBanner = ({ imageSrc, altText, linkUrl, label }) => {
   return (
     <div className="my-8">
       {label && (
-        <div className="text-center text-sm text-gray-500 mb-2">
-          {label}
-        </div>
+        <div className="text-center text-sm text-gray-500 mb-2">{label}</div>
       )}
       <a
         href={linkUrl}

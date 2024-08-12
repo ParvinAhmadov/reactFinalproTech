@@ -1,24 +1,23 @@
-import React from 'react';
-import FeaturedLargeCard from '../../atoms/FeaturedLargeCard';
-import FeaturedSmallCard from '../../atoms/FeaturedSmallCard';
-import EditorPicks from '../../atoms/EditorPicks';
+import React from "react";
+import FeaturedLargeCard from "../../atoms/FeaturedLargeCard";
+import FeaturedSmallCard from "../../atoms/FeaturedSmallCard";
+import EditorPicks from "../../atoms/EditorPicks";
 
 const FeaturedReviewsSection = () => {
-    return (
-      
-        <div className="container mx-auto max-w-7xl py-8">
-        <EditorPicks title="Featured Reviews"/>
-            
+  return (
+    <div className="container mx-auto max-w-7xl py-8">
+      <EditorPicks title="Featured Reviews" />
+
       <div className="flex">
         <FeaturedLargeCard
           image="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/woman-in-3d-virtual-reality-glasses_t20_WQVvL4.jpg"
           category="Gaming"
           title="Pico 4 Review: Should You Actually Buy One Instead Of Quest 2?"
           author="Shane Doe"
-                  date="Jan 15, 2021"
-                  desrp="To understand the new smart watched and other pro devices of recent focus, we should look to…"
-                  authorImage="https://cheerup.theme-sphere.com/wp-content/uploads/2016/05/bella-doe.jpg"
-                  rating="89"
+          date="Jan 15, 2021"
+          desrp="To understand the new smart watched and other pro devices of recent focus, we should look to…"
+          authorImage="https://cheerup.theme-sphere.com/wp-content/uploads/2016/05/bella-doe.jpg"
+          rating="89"
         />
       </div>
       <div className="flex gap-4 mt-8">

@@ -1,8 +1,5 @@
 import React from "react";
-import {
-  FaInstagram,
-  FaPinterestP,
-} from "react-icons/fa";
+import { FaInstagram, FaPinterestP } from "react-icons/fa";
 import { GiFlame } from "react-icons/gi";
 import { ImFacebook } from "react-icons/im";
 import { RiTwitterXFill } from "react-icons/ri";
@@ -198,7 +195,10 @@ const Footer = () => {
               </a>
             </div>
             <div className="text-[13px]">
-              <p className="text-[#777777]">© 2024 ThemeSphere. Designed by <span className="text-gray-300" >ThemeSphere</span>.</p>
+              <p className="text-[#777777]">
+                © 2024 ThemeSphere. Designed by{" "}
+                <span className="text-gray-300">ThemeSphere</span>.
+              </p>
             </div>
           </div>
         </div>

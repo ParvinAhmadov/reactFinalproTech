@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const SmallCard = ({ image, category, title }) => {
   return (
@@ -11,7 +11,9 @@ const SmallCard = ({ image, category, title }) => {
         />
         <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-30 transition-opacity duration-300 ease-in-out"></div>
         <div className="absolute bottom-0 left-0 p-4 bg-transparent w-full text-white/45">
-          <span className="text-white bg-[#3C3FDE] p-1 rounded font-bold uppercase">{category}</span>
+          <span className="text-white bg-[#3C3FDE] p-1 rounded font-bold uppercase">
+            {category}
+          </span>
         </div>
       </div>
       <div className="bg-white p-4 rounded-b-lg shadow group-hover:shadow-lg transition-shadow duration-300 ease-in-out">

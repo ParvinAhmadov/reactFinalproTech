@@ -1,13 +1,18 @@
-import React from 'react';
-import { FaPlay } from 'react-icons/fa'; 
+import React from "react";
+import { FaPlay } from "react-icons/fa";
 
-const VideoCard = ({ imageSrc, title1, title2, category, author, date, authorImage, size = "medium" }) => {
+const VideoCard = ({
+  imageSrc,
+  title1,
+  title2,
+  category,
+  author,
+  date,
+  authorImage,
+  size = "medium",
+}) => {
   const sizeClasses =
-    size === "large"
-      ? "h-full"
-      : size === "medium"
-      ? "h-64"
-      : "h-32"; 
+    size === "large" ? "h-full" : size === "medium" ? "h-64" : "h-32";
 
   return (
     <div className={`relative ${sizeClasses}`}>
@@ -23,20 +28,22 @@ const VideoCard = ({ imageSrc, title1, title2, category, author, date, authorIma
       </div>
       {size === "large" && (
         <div className="absolute bottom-[5rem] left-0 p-6 w-full h-[120px] text-white mb-8 ">
-          <div className="text-white bg-[#AB07AB] p-2 text-sm rounded mb-2 font-semibold uppercase inline-block">{category}</div>
+          <div className="text-white bg-[#AB07AB] p-2 text-sm rounded mb-2 font-semibold uppercase inline-block">
+            {category}
+          </div>
           <h2 className="text-[29px] w-[639px] font-bold flex flex-col gap-2">
             <span className="block bg-black p-1">{title1}</span>
             <span className="block bg-black p-1">{title2}</span>
           </h2>
           <div className="flex items-center mt-2">
-            <img 
-              src={authorImage} 
-              alt={author} 
+            <img
+              src={authorImage}
+              alt={author}
               className="w-5 h-5 rounded-full mr-2"
             />
-            <div className='flex gap-2 text-sm'>
+            <div className="flex gap-2 text-sm">
               <p className="text-gray-400">{`By ${author} `}</p>
-              <span> •  { `${date}`}</span>
+              <span> • {`${date}`}</span>
             </div>
           </div>
         </div>

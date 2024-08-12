@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const AlertButton = ({ message, type = "error", onClose }) => {
   const alertStyles = {
@@ -8,7 +8,9 @@ const AlertButton = ({ message, type = "error", onClose }) => {
   };
 
   return (
-    <div className={`flex items-center justify-between ${alertStyles[type]} px-4 py-2 rounded mb-4`}>
+    <div
+      className={`flex items-center justify-between ${alertStyles[type]} px-4 py-2 rounded mb-4`}
+    >
       <span>{message}</span>
       <button
         onClick={onClose}

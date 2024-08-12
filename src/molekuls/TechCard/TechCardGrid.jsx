@@ -68,7 +68,7 @@ const TechCardGrid = () => {
               readTime="6 Mins Read"
               image="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/Depositphotos_378099058_xl-2015-1-450x270.jpg"
             />
-             <SidebarCard
+            <SidebarCard
               category="Technology"
               title="Epic Games Store Gives Away One of The Best VR Games"
               author="Shane Doe"

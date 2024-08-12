@@ -1,6 +1,15 @@
-import React from 'react';
+import React from "react";
 
-const FeaturedLargeCard = ({ image, category, title, author, date, desrp, authorImage, rating }) => {
+const FeaturedLargeCard = ({
+  image,
+  category,
+  title,
+  author,
+  date,
+  desrp,
+  authorImage,
+  rating,
+}) => {
   return (
     <div className="relative w-full bg-[#0D0D25] rounded-lg overflow-hidden group cursor-pointer flex">
       <div className="w-1/2 p-6 m-20">
@@ -9,11 +18,15 @@ const FeaturedLargeCard = ({ image, category, title, author, date, desrp, author
         </div>
         <h2 className="text-3xl font-bold text-white mb-4">{title}</h2>
         <div className="flex items-center gap-2">
-          <img className='w-4 h-4 rounded-full' src={authorImage} alt={author} />
+          <img
+            className="w-4 h-4 rounded-full"
+            src={authorImage}
+            alt={author}
+          />
           <p className="text-gray-400">By {author}</p>
           <span className="ml-2 text-gray-400">• {date}</span>
         </div>
-        <p className='text-gray-600'>{desrp}</p>
+        <p className="text-gray-600">{desrp}</p>
       </div>
       <div className="relative w-1/2">
         <img

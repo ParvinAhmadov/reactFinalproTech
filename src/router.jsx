@@ -4,7 +4,6 @@ import ErrorPage from "./pages/ErrorPage";
 import Layout from "./featured/Layout/Layout";
 import GadgetsPagee from "./pages/GadgetsPage";
 
-
 const routers = createBrowserRouter([
   {
     path: "/",
@@ -22,7 +21,6 @@ const routers = createBrowserRouter([
         path: "/gadgetspage",
         element: <GadgetsPagee />,
       },
-      
     ],
   },
   {

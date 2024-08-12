@@ -8,8 +8,10 @@ const TrendingVideos = () => {
   return (
     <div className="bg-[#111129] p-[2rem]">
       <div className="container mx-auto max-w-7xl">
-        <TrendingHeader title="Trending Videos
-"  />
+        <TrendingHeader
+          title="Trending Videos
+"
+        />
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
           <div className="col-span-2 row-span-2">
@@ -27,19 +29,19 @@ const TrendingVideos = () => {
 
           <div className="grid grid-cols-1 gap-4">
             <SmallVideoCard
-              imageSrc="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/jerin-john-Smbz6GQt_CI-unsplash-2-450x264.jpg"
+              imageSrc="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/pexels-leon-3636001-2-450x300.jpg"
               title="Photography: Save $800 on a Fujifilm Camera Before Black Friday"
               author="Shane Doe"
               date="Sep 12, 2020"
             />
             <SmallVideoCard
-              imageSrc="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/freestocks-hRVrvH9-dG0-unsplash-1-450x300.jpg"
+              imageSrc="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/jerin-john-Smbz6GQt_CI-unsplash-2-450x264.jpg"
               title="Wireless Earbuds May Help Amplify Sound for People with Hearing Loss"
               author="Shane Doe"
               date="Sep 16, 2020"
             />
             <SmallVideoCard
-              imageSrc="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/freestocks-hRVrvH9-dG0-unsplash-1-450x300.jpg"
+              imageSrc="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/light-fun-technology-neon-woman-enjoy-headset-happy-virtual-vr_t20_zWNmJX-1-450x301.jpg"
               title="Wireless Earbuds May Help Amplify Sound for People with Hearing Loss"
               author="Shane Doe"
               date="Sep 16, 2020"

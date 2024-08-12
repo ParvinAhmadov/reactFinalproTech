@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import { ToastContainer, toast } from 'react-toastify'; 
-import 'react-toastify/dist/ReactToastify.css'; 
-import EditorCard from '../../atoms/EditorCard';
-import CardModal from '../../atoms/CardModal';
-import SpinnerButton from '../../atoms/SpinnerButton';
+import React, { useEffect, useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import EditorCard from "../../atoms/EditorCard";
+import CardModal from "../../atoms/CardModal";
+import SpinnerButton from "../../atoms/SpinnerButton";
 
 const CardList = () => {
   const [cards, setCards] = useState([]);
@@ -17,87 +17,91 @@ const CardList = () => {
 
   useEffect(() => {
     setIsFetching(true);
-    fetch('http://localhost:3001/cards')
-      .then(response => response.json())
-      .then(data => {
+    fetch("http://localhost:3001/cards")
+      .then((response) => response.json())
+      .then((data) => {
         setCards(data);
         setIsFetching(false);
       })
       .catch(() => {
-        toast.error('Failed to fetch cards.'); 
+        toast.error("Failed to fetch cards.");
         setIsFetching(false);
       });
   }, []);
 
-  const handleDelete = id => {
+  const handleDelete = (id) => {
     setIsDeleting(true);
     fetch(`http://localhost:3001/cards/${id}`, {
-      method: 'DELETE',
+      method: "DELETE",
     })
-    .then(() => {
-      setCards(cards.filter(card => card.id !== id));
-      toast.success('Card deleted successfully!'); 
-      closeModal();
-      setIsDeleting(false);
-    })
-    .catch(() => {
-      toast.error('Failed to delete card.'); 
-      setIsDeleting(false);
-    });
+      .then(() => {
+        setCards(cards.filter((card) => card.id !== id));
+        toast.success("Card deleted successfully!");
+        closeModal();
+        setIsDeleting(false);
+      })
+      .catch(() => {
+        toast.error("Failed to delete card.");
+        setIsDeleting(false);
+      });
   };
 
-  const handleEdit = id => {
-    setSelectedCard(cards.find(card => card.id === id));
-    setModalContent('edit');
+  const handleEdit = (id) => {
+    setSelectedCard(cards.find((card) => card.id === id));
+    setModalContent("edit");
     setIsModalOpen(true);
   };
 
-  const handleView = id => {
-    setSelectedCard(cards.find(card => card.id === id));
-    setModalContent('view');
+  const handleView = (id) => {
+    setSelectedCard(cards.find((card) => card.id === id));
+    setModalContent("view");
     setIsModalOpen(true);
   };
 
   const handleUpdate = (id, updatedCard) => {
     setIsUpdating(true);
     fetch(`http://localhost:3001/cards/${id}`, {
-      method: 'PUT',
+      method: "PUT",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(updatedCard),
     })
-      .then(response => response.json())
+      .then((response) => response.json())
       .then(() => {
-        setCards(cards.map(card => (card.id === id ? { ...card, ...updatedCard } : card)));
-        toast.success('Card updated successfully!'); 
+        setCards(
+          cards.map((card) =>
+            card.id === id ? { ...card, ...updatedCard } : card
+          )
+        );
+        toast.success("Card updated successfully!");
         closeModal();
         setIsUpdating(false);
       })
       .catch(() => {
-        toast.error('Failed to update card.'); 
+        toast.error("Failed to update card.");
         setIsUpdating(false);
       });
   };
 
   const handleAdd = (newCard) => {
     setIsAdding(true);
-    fetch('http://localhost:3001/cards', {
-      method: 'POST',
+    fetch("http://localhost:3001/cards", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(newCard),
     })
-      .then(response => response.json())
-      .then(addedCard => {
+      .then((response) => response.json())
+      .then((addedCard) => {
         setCards([...cards, addedCard]);
-        toast.success('Card added successfully!'); 
+        toast.success("Card added successfully!");
         closeModal();
         setIsAdding(false);
       })
       .catch(() => {
-        toast.error('Failed to add new card.'); 
+        toast.error("Failed to add new card.");
         setIsAdding(false);
       });
   };
@@ -109,19 +113,16 @@ const CardList = () => {
   };
 
   const openAddModal = () => {
-    setModalContent('add');
+    setModalContent("add");
     setIsModalOpen(true);
   };
 
   return (
     <>
-      <ToastContainer /> 
+      <ToastContainer />
 
       <div className="flex justify-end items-center mb-4">
-        <SpinnerButton 
-          isLoading={isAdding} 
-          onClick={openAddModal}
-        >
+        <SpinnerButton isLoading={isAdding} onClick={openAddModal}>
           Add New Card
         </SpinnerButton>
       </div>
@@ -133,25 +134,25 @@ const CardList = () => {
           </div>
         ) : (
           cards.map((card, index) => (
-            <EditorCard 
-              key={card.id} 
-              card={{...card, number: index + 1}} 
-              onEdit={handleEdit} 
-              onDelete={handleDelete} 
-              onView={handleView} 
+            <EditorCard
+              key={card.id}
+              card={{ ...card, number: index + 1 }}
+              onEdit={handleEdit}
+              onDelete={handleDelete}
+              onView={handleView}
             />
           ))
         )}
       </div>
-      
-      <CardModal 
-        isOpen={isModalOpen} 
-        closeModal={closeModal} 
-        modalContent={modalContent} 
-        selectedCard={selectedCard} 
-        handleDelete={handleDelete} 
+
+      <CardModal
+        isOpen={isModalOpen}
+        closeModal={closeModal}
+        modalContent={modalContent}
+        selectedCard={selectedCard}
+        handleDelete={handleDelete}
         handleUpdate={handleUpdate}
-        handleAdd={handleAdd}  
+        handleAdd={handleAdd}
       />
     </>
   );

@@ -1,10 +1,12 @@
-import React from 'react';
+import React from "react";
 
 const SidebarCard = ({ category, title, author, readTime, image }) => {
   return (
     <article className=" w-[340px] h-[135px] px-[20px] py-[10px] text-[#444444] font-inter text-[14px] flex items-center border-b border-gray-200">
       <div className="flex-1">
-        <span className="text-[#7c5cff] font-bold text-[11px] uppercase text-xs">{category}</span>
+        <span className="text-[#7c5cff] font-bold text-[11px] uppercase text-xs">
+          {category}
+        </span>
         <h4 className="text-[17px] font-semibold mt-1 leading-tight hover:text-[#2A2C9B] transition-colors duration-300 cursor-pointer">
           {title}
         </h4>

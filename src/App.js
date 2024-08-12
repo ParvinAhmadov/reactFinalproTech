@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { RouterProvider } from 'react-router-dom';
-import routers from './router';
-import { BeatLoader } from 'react-spinners'; 
+import React, { useState, useEffect } from "react";
+import { RouterProvider } from "react-router-dom";
+import routers from "./router";
+import { BeatLoader } from "react-spinners";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -9,7 +9,7 @@ const App = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2000); 
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, []);

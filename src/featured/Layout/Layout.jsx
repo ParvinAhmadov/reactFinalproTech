@@ -4,11 +4,15 @@ import { Outlet } from "react-router";
 import Footer from "../Footer/Footer";
 
 const Layout = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false); 
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   return (
     <div>
-      <Header className={`shadow-sm font-sans ${isDarkMode ? 'bg-gray-800 text-white' : 'bg-white text-black'}`} />
+      <Header
+        className={`shadow-sm font-sans ${
+          isDarkMode ? "bg-gray-800 text-white" : "bg-white text-black"
+        }`}
+      />
       <main>
         <Outlet />
       </main>
