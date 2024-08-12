@@ -1,8 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import Home from "./pages/Home";
-import GadgetsPage from "./pages/Gadgets";
 import ErrorPage from "./pages/ErrorPage";
 import Layout from "./featured/Layout/Layout";
+import GadgetsPagee from "./pages/GadgetsPage";
 
 
 const routers = createBrowserRouter([
@@ -20,7 +20,7 @@ const routers = createBrowserRouter([
       },
       {
         path: "/gadgetspage",
-        element: <GadgetsPage />,
+        element: <GadgetsPagee />,
       },
       
     ],

@@ -1,55 +1,42 @@
 import React from 'react';
-import NewGadgets from '../../atoms/NewGadgets';
-import SubscribeForm from '../../atoms/SubscribeForm';
-import GadgetsLargeCard from '../../atoms/GadgetsLargeCard';
 import GagetsSmallCard from '../../atoms/GadgetsSmallCard';
+import SubscribeForm from '../../atoms/SubscribeForm';
+import GadgetsSection from '../../atoms/GadgetsSection';
 
 const Gadgets = () => {
   return (
-    <div className="container mx-auto max-w-7xl py-8">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div className="md:col-span-2">
-          <GadgetsLargeCard 
-            imageSrc="https://example.com/large-image.jpg"
-            category="Gadgets"
-            title="Oculus Founder Makes a VR Headset That Can Literally Kill You"
-            author="Shane Doe"
-            date="Jan 13, 2021"
-            description="To understand the new smart watched and other pro devices of recent focus, we should..."
-          />
-        </div>
-
-        <div>
-          <NewGadgets title="New Gadgets" />
-        </div>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
-        <div className="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div className="container mx-auto max-w-7xl py-8 flex flex-col md:flex-row gap-8">
+      <div className="flex-1 space-y-8">
+        <GadgetsSection />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <GagetsSmallCard
-            imageSrc="https://example.com/small-image1.jpg"
+            imageSrc="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/Depositphotos_422797426_xl-2015-1-300x199.jpg"
             title="Braun Series 7 Electric Shaver Review: Quality at a Good Price"
             date="Jan 13, 2021"
           />
           <GagetsSmallCard 
-            imageSrc="https://example.com/small-image2.jpg"
+            imageSrc="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/Depositphotos_443469058_xl-2015-1-300x203.jpg"
             title="Google Pixel 7, iPhone 14 Compared: Check Out 5 Major Differences"
             date="Jan 13, 2021"
           />
           <GagetsSmallCard 
-            imageSrc="https://example.com/small-image3.jpg"
+            imageSrc="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/laurens-derks-h0tMHMyfr9A-unsplash-300x199.jpg"
             title="Why Apple Should Skip The MacBook Pro Launch"
             date="Jan 12, 2021"
           />
           <GagetsSmallCard 
-            imageSrc="https://example.com/small-image4.jpg"
+            imageSrc="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/youssef-sarhan-tze1kKj7Lgg-unsplash-1-300x191.jpg"
             title="The Famous Dyson Bladeless Fan is On Sale at Walmart"
             date="Jan 12, 2021"
           />
         </div>
+      </div>
 
-        <div className="space-y-4 sticky top-0">
-          <SubscribeForm />
+      <div className="w-full md:w-[336px]">
+        <div className="sticky-wrapper">
+          <div className="sticky top-4">
+            <SubscribeForm />
+          </div>
         </div>
       </div>
     </div>

@@ -1,12 +1,10 @@
 import React from 'react';
 
-const TrendingHeader = () => {
+const TrendingHeader = ({ title, textColor = 'text-white' }) => {
   return (
-    <div className="flex items-center mb-6">
-      <h4 className="text-[24px] font-bold text-white">
-        Trending Videos
-      </h4>
-      <div className="flex-grow ml-4 h-[2px] bg-gray-700"></div> 
+    <div className="flex items-center justify-between mb-4">
+      <h2 className={`text-2xl font-bold ${textColor}`}>{title}</h2> 
+      <div className="flex-grow ml-4 border-b-2 border-gray-300"></div>
     </div>
   );
 };

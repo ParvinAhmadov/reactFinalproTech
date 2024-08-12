@@ -1,19 +1,14 @@
 import React from 'react';
 
-const GadgetsLargeCard = ({ imageSrc, category, title, author, date, description }) => {
+const GadgetsLargeCard = ({ imageSrc, category }) => {
   return (
-    <div className="bg-white shadow-lg rounded-lg overflow-hidden">
+    <div className="bg-white shadow-lg rounded-lg overflow-hidden max-w-[848px] mx-auto relative">
       <img
         src={imageSrc}
-        alt={title}
-        className="w-full h-64 object-cover"
+        className="w-full h-[282px] object-cover"
       />
-      <div className="p-6">
-        <div className="text-purple-500 font-bold text-xs uppercase mb-2">{category}</div>
-        <h3 className="font-bold text-xl mb-2">{title}</h3>
-        <p className="text-gray-600 mb-4">{author} • {date}</p>
-        <p className="text-gray-700 mb-4">{description}</p>
-        <a href="#" className="text-blue-600 hover:text-blue-800">Read More</a>
+      <div className="absolute left-0 bottom-0 p-6  bg-opacity-50 ">
+        <div className="text-white font-bold text-xs uppercase mb-2 rounded bg-purple-500 p-2">{category}</div>
       </div>
     </div>
   );

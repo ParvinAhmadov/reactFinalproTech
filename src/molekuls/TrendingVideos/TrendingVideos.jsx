@@ -8,7 +8,8 @@ const TrendingVideos = () => {
   return (
     <div className="bg-[#111129] p-[2rem]">
       <div className="container mx-auto max-w-7xl">
-        <TrendingHeader />
+        <TrendingHeader title="Trending Videos
+"  />
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
           <div className="col-span-2 row-span-2">

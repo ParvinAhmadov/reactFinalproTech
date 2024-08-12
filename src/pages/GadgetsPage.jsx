@@ -1,6 +1,6 @@
 import React from 'react'
 
-const GadgetsPage = () => {
+const GadgetsPagee = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const GadgetsPage = () => {
   )
 }
 
-export default GadgetsPage
+export default GadgetsPagee
